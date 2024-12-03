@@ -1,0 +1,60 @@
+/* src/app/blog/contentModules.module.css */
+.calendarContainer {
+  background-color: #e5dde6;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px; /* Tamaño fijo para pantallas grandes */
+  margin-right: 16px; /* Espacio entre el calendario y el Paper */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .calendarContainer {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor */
+    padding: 15px; /* Reduce el padding */
+    max-width: 500px; /* Asegura que no supere los 500px */
+  }
+}
+
+@media (max-width: 768px) {
+  .calendarContainer {
+    width: 100%; /* Toma todo el ancho disponible */
+    padding: 10px; /* Reduce aún más el padding */
+    border-radius: 6px; /* Ajusta el border-radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta la sombra */
+  }
+}
+
+@media (max-width: 480px) {
+  .calendarContainer {
+    width: 100%; /* Toma todo el ancho disponible */
+    padding: 5px; /* Reduce aún más el padding */
+    border-radius: 4px; /* Ajusta el border-radius */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Ajusta la sombra */
+  }
+}
+
+.mainContent {
+  display: flex; /* Para que los elementos se alineen horizontalmente */
+  justify-content: space-between; /* Espacio entre los contenedores */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  margin-top: 80px; /* Ajusta según la altura de tu navbar */
+  padding: 20px;
+}
+
+.paperContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C51D34;
+  padding: 0; /* Elimina padding extra */
+  margin: 0;  /* Elimina márgenes extra */
+  width: 350px;
+}
+
+

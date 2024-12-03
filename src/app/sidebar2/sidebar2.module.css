@@ -1,0 +1,76 @@
+/* Estilos generales del Sidebar2 */
+.MuiDrawer-paper {
+  background-color: #333; /* Fondo oscuro para el sidebar */
+  color: #fff; /* Texto blanco */
+}
+
+.MuiDrawer-paper .MuiListItem-root {
+  border-bottom: 1px solid #444; /* Separadores entre los elementos */
+}
+
+.MuiDrawer-paper .MuiListItemText-root {
+  color: #fff; /* Color del texto */
+}
+
+/* Estilos del Navbar */
+.MuiAppBar-root {
+  background-color: #2c3e50; /* Fondo del navbar */
+  color: #ecf0f1; /* Texto claro en el navbar */
+}
+
+/* Título en el navbar */
+.MuiTypography-root {
+  font-size: 1.5rem; /* Tamaño de la fuente para el título */
+}
+
+/* Botón de menú en el Navbar (solo en pantallas pequeñas) */
+.MuiIconButton-root {
+  color: #ecf0f1; /* Color del botón de menú */
+}
+
+/* Estilos de los elementos del menú en el Sidebar */
+.MuiListItem-root:hover {
+  background-color: #444; /* Cambio de fondo al pasar el mouse */
+}
+
+/* Para el AppBar fijo en la parte superior */
+.MuiToolbar-root {
+  padding: 0 16px; /* Espaciado en el toolbar */
+}
+
+/* Ajustes para que el contenido no se solape con el AppBar */
+.bodyContent {
+  margin-top: 64px; /* Desplaza el contenido hacia abajo para evitar que se solape con el navbar */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+  .MuiDrawer-paper {
+      width: 200px; /* Ancho del sidebar en pantallas pequeñas */
+  }
+
+  .MuiAppBar-root {
+      background-color: #34495e; /* Cambiar el color del navbar en pantallas pequeñas */
+  }
+}
+
+/* Estilos generales del Sidebar2 */
+.MuiDrawer-paper {
+  background-color: #333;
+  color: #fff;
+}
+
+.MuiDrawer-paper .MuiListItem-root {
+  border-bottom: 1px solid #444;
+}
+
+.MuiDrawer-paper .MuiListItemText-root {
+  color: #fff;
+}
+
+/* Estilos del Navbar */
+.MuiAppBarRoot {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  z-index: 1201; /* Asegura que el navbar quede por encima del drawer */
+}

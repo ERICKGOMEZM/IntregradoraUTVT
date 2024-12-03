@@ -1,0 +1,17 @@
+.mainContent {
+    display: flex;
+    flex-direction: row; /* Cambia a flex-direction: row para alinear horizontalmente */
+  }
+  
+  .calendarContainer {
+    flex: 2; /* Haz que el calendario ocupe un 60% de la sección */
+    padding-right: 16px; /* Espaciado entre el calendario y el Paper */
+  }
+  
+  .paperContainer {
+    flex: 1; /* Haz que el Paper ocupe el 40% restante */
+    display: flex;
+    align-items: center; /* Centra verticalmente el Paper */
+    padding-left: 16px; /* Espaciado entre el Paper y el borde derecho */
+  }
+  

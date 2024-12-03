@@ -1,0 +1,25 @@
+/* src/app/vistaInicio/vistaInicio.module.css */
+
+.loginContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana del navegador */
+    background-color: #f7f7f7; /* Color de fondo opcional */
+}

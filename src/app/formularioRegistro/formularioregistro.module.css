@@ -1,0 +1,76 @@
+
+.registerContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+  
+  .link {
+    color: #0070f3;
+    text-decoration: underline;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .iconButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submitButton {
+    background-color: #0070f3;
+    color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .socialButtons {
+    display: flex;
+    justify-content: space-between;
+}

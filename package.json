@@ -6,19 +6,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.7",
+    "@mui/x-date-pickers": "^7.22.2",
+    "bcrypt": "^5.1.1",
+    "dayjs": "^1.11.13",
+    "jsonwebtoken": "^9.0.2",
+    "next": "14.2.14",
+    "pg": "^8.13.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.14"
+    "react-router-dom": "^6.28.0",
+    "sweetalert2": "^11.14.4"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@babel/plugin-syntax-jsx": "^7.25.9",
+    "@babel/preset-react": "^7.25.9",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.14"
+    "eslint-config-next": "14.2.14",
+    "typescript": "^5"
   }
 }

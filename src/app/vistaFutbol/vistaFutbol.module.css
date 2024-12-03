@@ -1,0 +1,48 @@
+/* src/styles/vistaFutbol.module.css */
+
+/* Navbar */
+.navbar {
+    background-color: #1e3d58;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1200; /* Asegura que el navbar esté por encima del contenido */
+  }
+  
+  .menuButton {
+    margin-right: 20px;
+  }
+  
+  .title {
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    flex-shrink: 0;
+  }
+  
+  .sidebarPaper {
+    width: 240px;
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .sidebarHeader {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+  }
+  
+  .MuiListItemText-root {
+    color: white;
+  }
+  
+  /* Otros estilos */
+  body {
+    padding-top: 64px; /* Para que el contenido no quede tapado por el navbar */
+    margin-left: 240px; /* Desplaza el contenido a la derecha para que no quede tapado por el sidebar */
+  }
+  

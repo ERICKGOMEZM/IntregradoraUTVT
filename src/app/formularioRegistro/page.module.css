@@ -1,0 +1,9 @@
+/* styles/Page.module.css */
+.pageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 50px; /* Ajusta este valor para bajar el formulario */
+  }
+  

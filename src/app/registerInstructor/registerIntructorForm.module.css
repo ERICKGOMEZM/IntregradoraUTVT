@@ -1,0 +1,93 @@
+
+
+.registerContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(201, 24, 24, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+  
+  .link {
+    color: #0070f3;
+    text-decoration: underline;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .passwordContainer {
+    position: relative;
+  }
+  
+  .iconButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submitButton {
+    background-color: #0070f3;
+    color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .socialButtons {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana del navegador */
+    background-color: #f7f7f7; /* Color de fondo opcional */
+  }

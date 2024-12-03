@@ -1,0 +1,113 @@
+/* /loginInstructores/loginInstructores.module.css.module.css */
+
+.loginContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    margin-bottom: 1.5rem;
+}
+
+.link {
+    color: #0070f3;
+    text-decoration: underline;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+    margin-bottom: 1rem;
+}
+
+.label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.forgotPassword {
+    display: block;
+    margin-bottom: 1rem;
+    color: #0070f3;
+}
+
+.submitButton {
+    padding: 0.8rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #005bb5;
+}
+
+.divider {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.socialButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconButton {
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* LoginForm.module.css */
+
+.passwordContainer {
+    position: relative; /* Para posicionar el botón sobre el input */
+}
+
+.iconButton {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red; /* O cualquier otro estilo que prefieras */
+    margin-top: 10px; /* Espaciado opcional */
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana del navegador */
+    background-color: #f7f7f7; /* Color de fondo opcional */
+  }
