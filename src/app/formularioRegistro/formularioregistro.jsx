@@ -83,7 +83,7 @@ const RegisterForm = () => {
     // Enviar los datos del formulario y el token al backend
     try {
       console.log("Enviando solicitud al backend...");
-      const response = await fetch('http://localhost:8080/api/register-taller', {
+      const response = await fetch('http://localhost:86/api/register-taller', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

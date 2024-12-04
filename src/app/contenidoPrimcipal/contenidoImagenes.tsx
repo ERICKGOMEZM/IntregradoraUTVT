@@ -26,13 +26,13 @@ export default function CustomImageList() {
           return (
             <ImageListItem key={item.img} cols={cols} rows={rows}>
               <Image
-                src={item.img}
-                alt={item.title}
-                layout="responsive"
-                width={250 * cols}
-                height={200 * rows}
-                priority={item.featured} // Da prioridad a imágenes destacadas.
-              />
+  src={item.img}
+  alt={item.title}
+  layout="fill" // Asegura que la imagen llene todo el contenedor.
+  objectFit="cover" // Mantiene las proporciones y recorta si es necesario.
+  priority={item.featured}
+/>
+
               <ImageListItemBar
                 sx={{
                   background:
@@ -61,53 +61,53 @@ export default function CustomImageList() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: '/imagenes/1a.jpg',
+    title: 'UTVT',
     featured: true,
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: '/imagenes/2.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: '/imagenes/3.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
+    img: '/imagenes/4.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
+    img: '/imagenes/5.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
+    img: '/imagenes/6.jpg',
+    title: 'UTVT',
     featured: true,
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
+    img: '/imagenes/7.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
+    img: '/imagenes/8.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
+    img: '/imagenes/9.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
+    img: '/imagenes/10.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
+    img: '/imagenes/11.jpg',
+    title: 'UTVT',
   },
   {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
+    img: '/imagenes/12.jpg',
+    title: 'UTVT',
   },
 ];

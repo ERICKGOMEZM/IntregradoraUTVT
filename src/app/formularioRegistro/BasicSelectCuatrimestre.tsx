@@ -22,7 +22,7 @@ export default function BasicSelect({ onChange }: BasicSelectPropsCuatrimestre) 
 
   React.useEffect(() => {
     // Fetch talleres desde la API
-    fetch('http://localhost:8080/api/cuatrimestre')
+    fetch('http://localhost:86/api/cuatrimestre')
       .then(response => response.json())
       .then(data => setCuatrimestres(data.map((cuatrimestre: { nombre_cuatrimestre: string }) => cuatrimestre.nombre_cuatrimestre)))
       .catch(error => console.error('Error al obtener talleres:', error));

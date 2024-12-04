@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { TextField, Button, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-//import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'; // Importar SweetAlert2
 import styles from '../loginInstructores/loginInstructore.module.css';
 
 const LoginInstructorForm = () => {
@@ -24,63 +24,71 @@ const LoginInstructorForm = () => {
     e.preventDefault();
 
     if (!role) {
-        setError('Por favor selecciona un rol.');
-        return;
+      setError('Por favor selecciona un rol.');
+      return;
     }
 
     try {
-        const endpoint = role === 'maestro'
-            ? 'http://localhost:8080/api/maestros/login'
-            : 'http://localhost:8080/api/admin/login-admin'; // Ruta basada en el rol seleccionado
+      const endpoint =
+        role === 'maestro'
+          ? 'http://localhost:86/api/maestros/login'
+          : 'http://localhost:86/api/admin/login-admin'; // Ruta basada en el rol seleccionado
 
-        const response = await fetch(endpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                correo,
-                contraseña: password,
-            }),
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          correo,
+          contraseña: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Mostrar la alerta de éxito con SweetAlert2
+        Swal.fire({
+          title: '¡Inicio de sesión exitoso!',
+          icon: 'success',
+          confirmButtonText: 'Aceptar',
         });
 
-        const data = await response.json();
+        // Guardar token en localStorage
+        localStorage.setItem('token', data.token);
 
-        if (response.ok) {
-            // Guardar token en localStorage
-            localStorage.setItem('token', data.token);
+        // Decodificar el token para obtener el rol (id_maestro, id_admin, etc.)
+        const decodedToken = JSON.parse(atob(data.token.split('.')[1])); // Decodificamos el token
 
-            // Decodificar el token para obtener el rol (id_maestro, id_admin, etc.)
-            const decodedToken = JSON.parse(atob(data.token.split('.')[1])); // Decodificamos el token
-
-            // Verificar el rol del usuario
-            if (decodedToken.id_maestro) {
-                // Si es maestro, redirigir a la vista correspondiente
-                switch (decodedToken.id_maestro) {
-                    case 1:
-                      router.push('/vistaInstructor');
-                        break;
-                    case 2:
-                        router.push('/vistaBasquetbol');
-                        break;
-                    default:
-                        router.push('/vistaGeneralMaestro');
-                        break;
-                }
-            } else if (decodedToken.id_admin) {
-                // Si es un administrador, redirigir a la vista del administrador
-                router.push('/vistaAdmin');
-            } else {
-                setError('Rol no reconocido');
-            }
+        // Verificar el rol del usuario
+        if (decodedToken.id_maestro) {
+          // Si es maestro, redirigir a la vista correspondiente
+          switch (decodedToken.id_maestro) {
+            case 1:
+              router.push('/vistaInstructor');
+              break;
+            case 2:
+              router.push('/vistaBasquetbol');
+              break;
+            default:
+              router.push('/vistaGeneralMaestro');
+              break;
+          }
+        } else if (decodedToken.id_admin) {
+          // Si es un administrador, redirigir a la vista del administrador
+          router.push('/vistaAdmin');
         } else {
-            setError(data.message || 'Error al iniciar sesión');
+          setError('Rol no reconocido');
         }
+      } else {
+        setError(data.message || 'Error al iniciar sesión');
+      }
     } catch (error) {
-        console.error('Error en la solicitud:', error);
-        setError('Error al procesar la solicitud. Intenta más tarde.');
+      console.error('Error en la solicitud:', error);
+      setError('Error al procesar la solicitud. Intenta más tarde.');
     }
-};
+  };
 
   return (
     <div className={styles.loginContainer} style={{ position: 'relative' }}>

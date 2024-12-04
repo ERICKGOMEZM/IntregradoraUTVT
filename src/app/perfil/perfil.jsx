@@ -30,7 +30,7 @@ export default function UserProfileForm() {
           return;
         }
 
-        const response = await fetch(`http://localhost:8080/api/auth/profile/${user.id_alumno}`, {
+        const response = await fetch(`http://localhost:86/api/auth/profile/${user.id_alumno}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

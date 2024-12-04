@@ -22,7 +22,7 @@ export default function BasicSelectPadecimiento({ onChange }: BasicSelectPropsPa
 
     React.useEffect(() => {
         // Fetch padecimientos desde la API
-        fetch('http://localhost:8080/api/padecimientos')
+        fetch('http://localhost:86/api/padecimientos')
         .then(response => response.json())
         .then(data => setPadecimientos(data.map((padecimiento: { tipo_padecimiento: string }) => padecimiento.tipo_padecimiento)))
         .catch(error => console.error('Error al obtener padecimientos:', error));

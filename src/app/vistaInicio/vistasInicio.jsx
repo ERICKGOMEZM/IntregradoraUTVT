@@ -75,13 +75,13 @@ const ImageMarked = styled('span')(({ theme }) => ({
 // Botones
 const images = [
   {
-    url: './alumno1.jpg',
+    url: './cuervo.png',
     title: 'Alumno',
     width: '100%',
     route: '/login', // Ruta para redirigir
   },
   {
-    url: '/maestro1.jpeg',
+    url: '/logotipo.png',
     title: 'Instructor',
     width: '100%',
     route: '/loginInstructores', // Puedes cambiar esta ruta

@@ -21,9 +21,14 @@
 .navLinks {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: flex-end; /* Mueve la lista hacia la derecha */
+  gap: 25px; /* Espaciado entre los elementos */
+  flex-grow: 0.5; /* Ocupa todo el espacio disponible */
 }
+
 
 .navLinks a {
   color: #fff;
@@ -90,5 +95,26 @@
 .navLinks .buttonItem:hover {
   background-color: #777; /* Color de fondo al pasar el mouse */
 }
+
+.navItem {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.registerButton {
+  background-color: transparent !important; /* Quita el fondo azul */
+  color: inherit; /* Mantiene el color del texto */
+  box-shadow: none; /* Elimina la sombra */
+  border: 1px solid #ccc; /* Puedes agregar un borde si lo deseas */
+  transition: all 0.3s ease; /* Agrega una transición suave */
+}
+
+.registerButton:hover {
+  background-color: #f0f0f0; /* Cambia el fondo al pasar el mouse */
+  color: #FFFFFF; /* Cambia el color del texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para el efecto de iluminación */
+}
+
+
 
 

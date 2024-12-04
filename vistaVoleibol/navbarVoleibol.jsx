@@ -7,9 +7,8 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import EditIcon from '@mui/icons-material/Edit';
 import LogoutIcon from '@mui/icons-material/Logout';
-import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation';
-import styles from './navbar.module.css';
+import styles from './navbarInstructor.module.css';
 import Sidebar from '../sidebar/sidebar';
 
 const Navbar = () => {
@@ -56,13 +55,9 @@ const Navbar = () => {
     }
   };
 
-  const handleRedirect = () => {
-    router.push('./formularioRegistro'); 
-  };
-
   const handleProfile = () => {
     if (isMounted) {
-      router.push('/perfil');
+      router.push('');
     }
   };
 
@@ -80,17 +75,11 @@ const Navbar = () => {
         )}
         <h1 className={styles.title}>Talleres Culturales y Deportivos</h1>
         <ul className={styles.navLinks}>
-          <li className={styles.navItem}>
-            <Button
-              className={styles.registerButton}
-              variant="contained"
-              disableElevation
-              onClick={handleRedirect}
-            >
-              Registrarte a un taller
-            </Button>
-          </li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a className={styles.taller}>Taller de Voleibol</a></li>
         </ul>
+        
         <div className={styles.avatarContainer}>
           <Badge
             overlap="circular"

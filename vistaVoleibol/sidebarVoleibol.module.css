@@ -1,0 +1,74 @@
+
+
+.sidebarContainer {
+    position: fixed; /* Mantener el sidebar en una posición fija */
+    top: 56px; /* Ajustar según la altura del navbar */
+    left: 0;
+    width: 250px; /* Ancho fijo del sidebar */
+    height: calc(100% - 56px); /* Altura total menos la altura del navbar */
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Asegura que se pueda desplazar verticalmente */
+    overflow-x: hidden; /* Evita que aparezca un scrollbar horizontal */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+    scrollbar-width: thin; /* Estilo del scrollbar en Firefox */
+}
+
+.sidebarContainer.open {
+    transform: translateX(0); /* Mostrar el sidebar al abrir */
+}
+
+.nav {
+    padding: 1rem;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+}
+
+.navItem {
+    margin: 0.5rem 0;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #333; /* Color del enlace */
+}
+
+@media (min-width: 769px) {
+    .sidebarContainer {
+      transform: translateX(0); /* Siempre visible en pantallas grandes */
+    }
+}
+
+.sidebarSubheader {
+    font-size: 2rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Asegura que la fuente esté en negrita */
+    padding: 16px; /* Espaciado alrededor del texto */
+    background-color: #f5f5f5; /* Color de fondo (opcional) */
+    text-align: center;
+    color: #1976d2;
+}
+
+.sidebarTitle  {
+    font-weight: bold;
+    color: #1976d2; /* Cambia el color según el diseño */
+    text-align: center;
+    padding: 16px;
+}
+
+  /* Personalización del scrollbar para navegadores basados en WebKit (Chrome, Brave, Safari, Edge) */
+.sidebarContainer::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+}
+
+.sidebarContainer::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1; /* Color del scrollbar */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.sidebarContainer::-webkit-scrollbar-track {
+    background-color: #f4f4f4; /* Fondo del track del scrollbar */
+}

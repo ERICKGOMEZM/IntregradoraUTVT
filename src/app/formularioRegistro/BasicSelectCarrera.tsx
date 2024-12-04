@@ -22,7 +22,7 @@ export default function BasicSelect({ onChange }: BasicSelectPropsCarrera) {
 
   React.useEffect(() => {
     // Fetch talleres desde la API
-    fetch('http://localhost:8080/api/carrera')
+    fetch('http://localhost:86/api/carrera')
       .then(response => response.json())
       .then(data => setcarreras(data.map((carrera: { nombre_carrera: string }) => carrera.nombre_carrera)))
       .catch(error => console.error('Error al obtener talleres:', error));
