@@ -34,7 +34,7 @@ const RegisterInstructorForm = () => {
   useEffect(() => {
     const fetchTalleres = async () => {
       try {
-        const response = await fetch('http://localhost:86/api/talleres');
+        const response = await fetch('http://localhost:8080/api/talleres');
         const data = await response.json();
         setTalleres(data);
       } catch (error) {
@@ -63,7 +63,7 @@ const RegisterInstructorForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:86/api/maestros/register-maestro', {
+      const response = await fetch('http://localhost:8080/api/maestros/register-maestro', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

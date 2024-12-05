@@ -31,8 +31,8 @@ const LoginInstructorForm = () => {
     try {
       const endpoint =
         role === 'maestro'
-          ? 'http://localhost:86/api/maestros/login'
-          : 'http://localhost:86/api/admin/login-admin'; // Ruta basada en el rol seleccionado
+          ? 'http://localhost:8080/api/maestros/login'
+          : 'http://localhost:8080/api/admin/login-admin'; // Ruta basada en el rol seleccionado
 
       const response = await fetch(endpoint, {
         method: 'POST',

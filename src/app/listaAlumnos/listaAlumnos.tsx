@@ -60,7 +60,7 @@ export default function BasicTable({ idTaller }: Props) {
     const obtenerDatos = async () => {
       try {
         const idTaller = 1; // Aquí, ¿por qué estás asignando 1 directamente? Esto se puede reemplazar por la prop `idTaller` para que se utilice correctamente.
-        const response = await fetch(`http://localhost:86/api/datos-register-taller/${idTaller}`);
+        const response = await fetch(`http://localhost:8080/api/datos-register-taller/${idTaller}`);
         if (!response.ok) throw new Error('Error al obtener los datos');
         const data = await response.json();
         console.log('Datos recibidos de la API:', data); // Revisa que id_alumno esté en cada alumno
@@ -114,7 +114,7 @@ export default function BasicTable({ idTaller }: Props) {
         // Depuración de datos enviados
         console.log('Datos enviados:', body);
   
-        const response = await fetch('http://localhost:86/api/asistencia', {
+        const response = await fetch('http://localhost:8080/api/asistencia', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body),

@@ -22,7 +22,7 @@ export default function BasicSelect({ onChange }: BasicSelectProps) {
 
   React.useEffect(() => {
     // Fetch talleres desde la API
-    fetch('http://localhost:86/api/talleres')
+    fetch('http://localhost:8080/api/talleres')
       .then(response => response.json())
       .then(data => setTalleres(data.map((taller: { nombre_taller: string }) => taller.nombre_taller)))
       .catch(error => console.error('Error al obtener talleres:', error));
